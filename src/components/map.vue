@@ -30,7 +30,10 @@ export default {
     LMap,
     LTileLayer,
     Restaurant
+  
   },
+   /**
+   
   data () {
     return {
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -45,6 +48,23 @@ export default {
       ]
     }
   },
+  */
+    
+  data () {
+    return {
+      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      center: [  5.31127, -4.01086 ],
+      zoom: 12,
+      markers: [
+        {id: 1, imageUrl: 'https://img.icons8.com/doodle/48/000000/fish-food--v1.png', coordinates: [ 5.31037, -4.01245 ]},
+        {id: 2, imageUrl: 'https://img.icons8.com/doodle/48/000000/pizza--v1.png' ,coordinates: [ 49.133290, 6.154370 ]},
+        {id: 3, imageUrl: 'https://img.icons8.com/doodle/48/000000/croissant--v1.png', coordinates: [ 49.102160, 6.158850 ]},
+        {id: 4, imageUrl: 'https://img.icons8.com/doodle/48/000000/the-toast--v2.png', coordinates: [ 49.136010, 6.199630 ]},
+        {id: 5, imageUrl: 'https://img.icons8.com/doodle/48/000000/hamburger.png', coordinates: [ 49.105563, 6.182234 ]},
+      ]
+    }
+  },
+  
   methods: {
     zoomUpdated (zoom) {
       this.zoom = zoom;
